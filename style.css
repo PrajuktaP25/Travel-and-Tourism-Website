@@ -143,6 +143,7 @@ background-color: #00ddff;
 }
 .service_card {
   height: 40vh !important;
+    box-shadow: 3px 3px 10px goldenrod, -3px -3px 10px goldenrod !important;
 }
 .fa-hiking,
 .fa-plane,
