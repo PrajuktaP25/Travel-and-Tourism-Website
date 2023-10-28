@@ -13,7 +13,7 @@
 </head>
 <body> 
   <!-- header -->
-  <header>
+  <header id="header">
     <nav class="navbar navbar-expand-md bg navbar-dark">
      <div class="logo">
         <img src="img/logo.png" alt="" class="logo_img">
@@ -44,9 +44,15 @@
   <br>
    </div>
  <button type="button" class="btn btn-success">Book Now</button></ul>
+    <div class="dark_mode">
+ <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+  </div>       
     </nav></header>
 <!-- container -->
 <section id="home">
+      <span id="coupon">
+  <button onClick="closeCoupon()">&times;</button>
+  </span>
 <div class="cont ">
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -327,6 +333,26 @@
     </div>
   </footer>
 </section>
+<script>
+    function onloadPage() {
+    document.getElementById('coupon').style.visibility = 'visible';
+
+    document.getElementById('home').style.opacity = '0.6'
+    document.getElementById('trending').style.opacity = '0.6'
+}
+
+function closeCoupon() {
+    document.getElementById('coupon').style.visibility = 'hidden';
+    document.getElementById('home').style.opacity = '1'
+    document.getElementById('trending').style.opacity = '1'
+}
+
+</script>
+
+<script>
+  window.onload = onloadPage()
+</script>
+
 
 
 
