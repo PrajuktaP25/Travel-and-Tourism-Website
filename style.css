@@ -2,12 +2,19 @@ body {
   width: 100%;
   height: 100%;
 }
+.bi-brightness-high-fill{
+  font-size: 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  right: 1%;
+}
 header {
   width: 100%;
 }
 
 .bg {
-  background-color: rgb(0, 0, 0);
+
   width: 100%;
 }
 .logo {
@@ -17,21 +24,36 @@ header {
 .logo_img {
   width: 10%;
   height: 10%;
+    background: #000;
+  border-radius: 50%;
 }
 
 .logo_name {
-  color: rgb(255, 255, 255);
+  color:rgb(64, 255, 0) ;
   font-size: 2rem;
   margin-left: 1%;
   margin-top: 1%;
   font-weight: bolder;
 }
 .nav-item {
-  color: rgb(255, 255, 255);
+  color: rgb(64, 255, 0);
   font-size: 1.5em;
 }
+.nav-item a{
+  font-size: 20px;
+  color: rgb(64, 255, 0);
+  font-weight: bold;
+}
+.login .fa-user-large{
+  
+  color:rgb(64, 255, 0);
+}
+.nav-link{
+color: #000;
+background: red;
+}
 .nav-item:hover{
-background-color: #00ddff;
+background-color:#0d0d0d93;
 }
 .fa-solid {
   color: aliceblue;
@@ -234,4 +256,18 @@ footer {
 }
 .social-links i:hover {
   background: #ffa500;
+}
+#coupon{
+  height: 55vh;
+  width: 30%;
+background-image: url("img/coupon.png");
+  position:absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 3%;
+  margin-left: 35%;
+  z-index: 100;
+  box-shadow: 7px 9px 12px  black, -7px -9px 12px  black;
+  visibility: hidden;
 }
