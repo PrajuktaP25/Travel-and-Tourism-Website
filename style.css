@@ -14,8 +14,7 @@ header {
 }
 
 .bg {
-
-  width: 100%;
+width: 100%;
 }
 .logo {
   display: flex;
@@ -24,7 +23,7 @@ header {
 .logo_img {
   width: 10%;
   height: 10%;
-    background: #000;
+  background: #000;
   border-radius: 50%;
 }
 
