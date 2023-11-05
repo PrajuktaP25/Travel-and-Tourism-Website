@@ -15,7 +15,14 @@
 <body> 
   <!-- header -->
   <header id="header">
-    <nav class="navbar navbar-expand-md bg navbar-dark">
+    <nav class="navbar navbar-expand-md bg navbar-dark"> <div  class="locn">
+      
+          <button onclick="geolocation()">Get Location</button>
+      <p id="out"></p>
+      <p id="weather"></p>
+      
+      </div>
+        
      <div class="logo">
         <img src="img/logo.png" alt="" class="logo_img">
         <div class="logo_name mx-1">Wanderhub</div></div>
@@ -337,11 +344,14 @@
     </div>
   </footer>
 </section>
+          
 <script>
+//
+window.onload = onloadPage()
+  
     function onloadPage() {
     document.getElementById('coupon').style.visibility = 'visible';
-
-    document.getElementById('home').style.opacity = '0.6'
+  document.getElementById('home').style.opacity = '0.6'
     document.getElementById('trending').style.opacity = '0.6'
 }
 
@@ -368,15 +378,48 @@ toggle.addEventListener('click',function(){
     header.style.transition='1s'
     }
 })
+
+
+ var x = document.getElementById('out');
+  var y = document.getElementById('weather');
+
+            function geolocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition)
+                }else{
+                    x.innerText = "Geo Not Supported"
+                }
+            }
+
+            function showPosition(data){
+                console.log(data)
+                let lat = data.coords.latitude;
+                let lon = data.coords.longitude;
+                x.innerHTML = `Latitude is ${lat} and longitude is ${lon}`
+                const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+                fetch(url,{method:'GET'})
+           
+                .then((res) =>  res.json())
+              
+                .then((data) => {
+                    console.log(data)
+                    let cityName = data.city.name;
+                    let temp = data.list[0].temp.day+" °C"
+                    y.innerHTML=`weather of ${cityName} is ${temp}`
+                })
+            }
 </script>
 
-<script>
+<!-- <script>
   window.onload = onloadPage()
-</script>
+</script> -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+
+
+
 </body>
 </html>
