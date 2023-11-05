@@ -6,7 +6,7 @@ body {
 .bi-brightness-high-fill{
   font-size: 35px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 10%;
   right: 1%;
 }
@@ -18,20 +18,6 @@ header {
 .bg {
 
   width: 100%;
-}
-.locn button{
-list-style-type: none;
-    margin: -16px 0px 43px 25px;
-  border: none;
-  outline: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  background-color:rgb(64, 255, 0);
-  border-radius: 8px;
-  position: absolute;
-  margin-right:1% ;
-  font-size: 14px;
-  
 }
 .logo {
   display: flex;
@@ -61,6 +47,33 @@ list-style-type: none;
   color: rgb(64, 255, 0);
   font-weight: bold;
 }
+.locn button{
+list-style-type: none;
+  margin: 4px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color:orange;
+  border-radius: 8px;
+  position: absolute;
+  margin-right:1% ;
+  font-size: 14px;
+  
+}
+.locn #out{
+  color: #000;
+   font-size: 13px;
+   transform: translate(26px, 33px);
+   
+}
+.locn #weather{
+  transform: translate(23px, 14px);
+  color: #000;
+  font-size: 13px;
+
+}
+
 .login .fa-user-large{
   
   color:rgb(64, 255, 0);
@@ -79,7 +92,7 @@ background-color: #0d0d0d93;
 }
 
 .btn {
-  margin-right: 5%;
+  margin-right: 7%;
 }
 .d-block {
   width: 100%;
