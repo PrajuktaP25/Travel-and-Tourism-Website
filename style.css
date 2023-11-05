@@ -20,7 +20,8 @@ header {
   width: 100%;
 }
 .locn button{
-margin: -3px;
+margin-bottom: -7px;
+  margin-left: 7px
 border: none;
 outline: none;
 font-weight: bold;
