@@ -19,6 +19,16 @@ header {
 
   width: 100%;
 }
+.locn button{
+margin: 14px;
+border: none;
+outline: none;
+font-weight: bold;
+padding: 5px 10px;
+background-color: #ffa500;
+border-radius: 8px;
+position:absolute;
+}
 .logo {
   display: flex;
   margin-left: 10%;
